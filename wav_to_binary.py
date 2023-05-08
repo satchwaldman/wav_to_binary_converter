@@ -14,8 +14,8 @@ int_data_cut = int_data_full[0:1000]
 
 ###### Choose whether to use the entire bitstream or a curtailed version #######
 
-curr_data = int_data_cut
-# curr_data = int_data_full
+# curr_data = int_data_cut
+curr_data = int_data_full
 
 bitstream = bytes(curr_data)
 
@@ -38,7 +38,7 @@ with open('bitstreams/input_bitstream.txt', 'w') as file:
 # Specify the audio parameters
 sample_rate = 44100  # samples per second
 duration = 5.0  # seconds
-bits_per_sample = 16  # number of bits per sample
+bits_per_sample = 24  # number of bits per sample
 
 # Pad the bitstream with zeros if necessary
 if len(bitstream) % 2 != 0:
