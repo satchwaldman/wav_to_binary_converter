@@ -2,7 +2,8 @@ import csv
 import numpy as np
 from scipy.io import wavfile
 
-input_file = "output_data_mono.csv"
+input_file = "src/output_data_mono.csv" # run this if the original .wav file is stereo
+# input_file = "src/output_data.csv" # run this if the original .wav file is mono
 output_file = "output_wav_file.wav"
 sample_rate = 44100  # Change this to the desired sample rate (e.g., 44100 for CD quality)
 

@@ -1,7 +1,7 @@
 import csv
 
-input_file = "output_data.csv"
-output_file = "output_data_mono.csv"
+input_file = "src/output_data.csv"
+output_file = "src/output_data_mono.csv"
 
 # Open the input and output files
 with open(input_file, "r") as file_in, open(output_file, "w", newline="") as file_out:
