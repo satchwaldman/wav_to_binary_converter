@@ -6,24 +6,26 @@ import matplotlib.pyplot as plt
 import math
 import csv
 
-with open("from_git/wav_files/shaking_foliage.wav", "rb") as wavfile:
+with open("from_git/wav_files/woodwinds.wav", "rb") as wavfile:
     input_wav = wavfile.read()
 
 # here, input_wav is a bytes object representing the wav object
 rate, data = read(io.BytesIO(input_wav))
 
-# with open('output_data.csv', 'w', newline='') as csvfile:
-#     writer = csv.writer(csvfile)
-#     for row in data:
-#         writer.writerow([row])
+with open('output_data.csv', 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    for row in data:
+        writer.writerow([row])
+
+# print(np.shape(data))
 
 ### VISUALIZATION
 
-print(data[0])
-print(rate)
-print(math.log2(np.max(data)))
-plt.plot(data)
-plt.show()
+# print(data[0])
+# print(rate)
+# print(math.log2(np.max(data)))
+# plt.plot(data)
+# plt.show()
 
 # # rate = 44100
 # write('test.wav', rate, data)
